@@ -69,7 +69,7 @@ public class OutcomeService {
 
 
         cardFrom.setBalance(balance - totalAmount);
-        cardTo.setBalance(dto.getAmount());
+        cardTo.setBalance(cardTo.getBalance()+dto.getAmount());
        cardRepository.save(cardFrom);
        cardRepository.save(cardTo);
 
